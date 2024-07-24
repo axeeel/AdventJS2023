@@ -1,0 +1,12 @@
+function manufacture(gifts, materials) {
+  const materialsSet = new Set(materials);
+  const listGifts = [];
+  gifts.forEach(gift => { 
+    const canForm = gift.split('').every(char => materialsSet.has(char));
+    if (canForm) {
+      listGifts.push(gift); 
+    }
+  });
+
+  return listGifts;
+}
