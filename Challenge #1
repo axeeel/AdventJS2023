@@ -1,0 +1,11 @@
+function findFirstRepeated(gifts) {
+  const seen = new Set();
+  const numberRepeated = gifts.find(number => {
+    if(seen.has(number)){
+      return true;
+    }
+    seen.add(number);
+    return false
+  });
+  return numberRepeated === undefined ? -1 :numberRepeated;
+}
